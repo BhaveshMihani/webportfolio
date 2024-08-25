@@ -1,93 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<title>
-    Bhavesh's Protfolio
-</title>
-<meta name="description" content="Bhavesh Mihani's portfolio showcasing web development projects and social media profiles.">
-<style>
-     body {
-        background: linear-gradient(to right, #6a11cb, #b721ff);
-        color: #fff;
-    }
-    .container {
-        margin-top: 50px;
-    }
-    .card {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: none;
-        margin-bottom: 20px;
-        border-radius: 15px;
-    }
-    .card-title {
-        color: #ffeb3b;
-    }
-    .btn-dark {
-        background-color: #ffeb3b;
-        border: none;
-        color: #000;
-        transition: background-color 0.3s;
-    }
-    .btn-dark:hover {
-        background-color: #fdd835;
-    }
-    .social-icons a {
-        margin: 0 10px;
-        color: #ffeb3b;
-        font-size: 1.5em;
-        transition: color 0.3s;
-    }
-    .social-icons a:hover {
-        color: #fdd835;
-    }
-    .list-group-item {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: none;
-        color: #fff;
-    }
-    .list-group-item a {
-        color: black;
-    }
-    .list-group-item a:hover {
-        list-style:none;
-        text-decoration: none;
-        color: black;
-    }
-    .project-image {
-        width: 100%;
-        border-radius: 15px;
-        transition: filter 0.3s;
-    }
-    .project-container {
-        position: relative;
-    }
-    .launch-preview {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-        background-color: #ffeb3b;
-        color: #000;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    .project-container:hover .project-image {
-        filter: blur(5px);
-    }
-    .project-container:hover .launch-preview {
-        display: block;
-    }
-    .infinite-loop {
-            display: block;
-            margin: 0 auto;
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>
+        Bhavesh's Protfolio
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bhavesh Mihani's portfolio showcasing web development projects and social media profiles.">
+    <style>
+        /* General Styles */
+        body {
+            /* background: linear-gradient(to right, #6a11cb, #b721ff); */
+            background: linear-gradient(to right, #100b9c, #125fb0);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-</style>
+
+        .container {
+            margin-top: 50px;
+            padding: 0 15px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        .card-title {
+            color: #ffeb3b;
+        }
+
+        .btn-dark {
+            background-color: #ffeb3b;
+            border: none;
+            color: #000;
+            transition: background-color 0.3s;
+        }
+
+        .btn-dark:hover {
+            background-color: #fdd835;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #ffeb3b;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #fdd835;
+        }
+
+        .list-group-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+        }
+
+        .list-group-item a {
+            color: #000000;
+        }
+
+        .list-group-item a:hover {
+            color: #f1f1f1;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 15px;
+            transition: filter 0.3s;
+        }
+
+        .project-container {
+            position: relative;
+        }
+
+        .launch-preview {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            background-color: #ffeb3b;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .project-container:hover .project-image {
+            filter: blur(5px);
+        }
+
+        .project-container:hover .launch-preview {
+            display: block;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 20px;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .social-icons a {
+                font-size: 1.2em;
+            }
+
+            .list-group-item {
+                padding: 10px;
+            }
+
+            .project-container {
+                margin-bottom: 20px;
+            }
+
+            .project-image {
+                width: 100%;
+            }
+
+            .launch-preview {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-title {
+                font-size: 1.2em;
+            }
+
+            .btn-dark {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+
+            .social-icons a {
+                font-size: 1em;
+            }
+
+            .list-group-item {
+                padding: 8px;
+            }
+
+            .project-container {
+                margin-bottom: 15px;
+            }
+
+            .project-image {
+                width: 100%;
+            }
+
+            .launch-preview {
+                padding: 6px 12px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="container text-center">
         <h1>Bhavesh Mihani</h1>
@@ -95,15 +176,18 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><i class="fab fa-github"></i> GitHub Profile</h5>
-                <a href="https://github.com/BhaveshMihani/" class="btn btn-dark" target="_blank">Visit GitHub</a>
+                <a href="https://github.com/your-github-username" class="btn btn-dark" target="_blank">Visit
+                    GitHub</a>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><i class="fas fa-share-alt"></i> Social Media</h5>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin">LinkedIn</i></a>
-                    <a href="https://www.instagram.com/your-instagram-username" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram">Instagram</i></a>
+                    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank"
+                        aria-label="LinkedIn Profile"><i class="fab fa-linkedin">LinkedIn</i></a>
+                    <a href="https://www.instagram.com/your-instagram-username" target="_blank"
+                        aria-label="Instagram Profile"><i class="fab fa-instagram">Instagram</i></a>
                 </div>
             </div>
         </div>
@@ -115,12 +199,18 @@
                         <div class="row">
                             <div class="col-md-4 project-container">
                                 <img src="pig-game.png" alt="Project Image" class="project-image">
-                                <a href="https://bhaveshmihani.github.io/JS-Projects/07-Pig-Game/starter/index" class="launch-preview" target="_blank">Launch Preview</a>
+                                <a href="https://bhaveshmihani.github.io/JS-Projects/07-Pig-Game/starter/index" class="launch-preview"
+                                    target="_blank">Launch Preview</a>
                             </div>
                             <div class="col-md-8 text-left">
                                 <h6>Pig Game</h6>
-                                <p>This is a two-player dice game where each player takes turns rolling a dice to accumulate points. Players can choose to hold their current score or risk rolling again to increase it. The first player to reach the target score wins. 🎲<p>
-                                <a href="https://bhaveshmihani.github.io/JS-Projects/07-Pig-Game/starter/index" target="_blank">View Project</a>
+                                <p>This is a two-player dice game where each player takes turns rolling a dice to
+                                    accumulate points. Players can choose to hold their current score or risk
+                                    rolling again to increase it. The first player to reach the target score wins.
+                                    🎲
+                                <p>
+                                    <a href="https://bhaveshmihani.github.io/JS-Projects/07-Pig-Game/starter/index"
+                                        target="_blank">View Project</a>
                             </div>
                         </div>
                     </li>
@@ -128,12 +218,19 @@
                         <div class="row">
                             <div class="col-md-4 project-container">
                                 <img src="Guessnum.png" alt="Project Image" class="project-image">
-                                <a href="https://bhaveshmihani.github.io/JS-Projects/05-Guess-My-Number/starter/index" class="launch-preview" target="_blank">Launch Preview</a>
+                                <a href="https://bhaveshmihani.github.io/JS-Projects/05-Guess-My-Number/starter/index" class="launch-preview"
+                                    target="_blank">Launch Preview</a>
                             </div>
                             <div class="col-md-8 text-left">
                                 <h6>Guess My Number</h6>
-                                <p>This is a number guessing game called “Guess My Number!” where players try to guess a hidden number between 1 and 20. Players input their guess and click “Check!” to see if they’re correct. The game tracks the current score and high score, adding a competitive element. 🎮</p>
-                                <a href="https://bhaveshmihani.github.io/JS-Projects/05-Guess-My-Number/starter/index" target="_blank">View Project</a>
+                                <p>This is a number guessing game called “Guess My Number!” where players try to
+                                    guess a
+                                    hidden number between 1 and 20. Players input their guess and click “Check!” to
+                                    see
+                                    if they’re correct. The game tracks the current score and high score, adding a
+                                    competitive element. 🎮</p>
+                                <a href="https://bhaveshmihani.github.io/JS-Projects/05-Guess-My-Number/starter/index"
+                                    target="_blank">View Project</a>
                             </div>
                         </div>
                     </li>
@@ -141,21 +238,27 @@
                         <div class="row">
                             <div class="col-md-4 project-container">
                                 <img src="RSP.png" alt="Project Image" class="project-image">
-                                <a href="https://bhaveshmihani.github.io/Rockpaperscissor/RSP" class="launch-preview" target="_blank">Launch Preview</a>
+                                <a href="https://bhaveshmihani.github.io/Rockpaperscissor/RSP" class="launch-preview"
+                                    target="_blank">Launch Preview</a>
                             </div>
                             <div class="col-md-8 text-left">
                                 <h6>Rock Paper Scissors</h6>
-                                <p>This is a classic “Rock Paper Scissors” game. Players choose between rock, paper, or scissors to compete against the computer. The interface is user-friendly, with clear options and a fun, engaging design. ✊📄✂️</p>
-                                <a href="https://bhaveshmihani.github.io/Rockpaperscissor/RSP" target="_blank">View Project</a>
+                                <p>This is a classic “Rock Paper Scissors” game. Players choose between rock, paper,
+                                    or
+                                    scissors to compete against the computer. The interface is user-friendly, with
+                                    clear
+                                    options and a fun, engaging design. ✊📄✂️</p>
+                                <a href="https://bhaveshmihani.github.io/Rockpaperscissor/RSP" target="_blank">View
+                                    Project</a>
                             </div>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-md-4">
-                                <img src="food-street3.gif" alt="Project Image" class="project-image infinite-loop">
+                            <div class="col-md-4 project-container">
+                                <img src="food-street3.gif" alt="Project Image" class="project-image">
                             </div>
-                            <div class="col-md-8 text-left" style="display:flex;justify-content: center; align-items: center;">
+                            <div class="col-md-8 text-left" style="display: flex; align-items: center; justify-self: center;">
                                 <h1>There’s More Coming Soon 🚀</h1>
                             </div>
                         </div>
@@ -169,4 +272,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
+
 </html>
